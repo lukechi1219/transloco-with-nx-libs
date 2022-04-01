@@ -16,14 +16,17 @@ import { scopeLoader } from '../../../../scoped-translations';
       useValue: {
         scope: 'compA',
         loader: scopeLoader((lang: string, root: string) =>
-          import(`./${root}/${lang}.json`)
+          // import(`./${ root }/${ lang }.json`)
+       import(`../assets/${root}/${lang}.json`)
         )
       }
     }
   ]
 })
 export class LocationAComponent implements OnInit {
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }
